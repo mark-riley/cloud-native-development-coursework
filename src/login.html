@@ -17,23 +17,11 @@
             <div class="row align-items-start">
                 <div class="col-2"></div>
                 <div class="col-8">
-                    <form action="action_page.php" method="post">
-                    
-                        <div class="">
-                            <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required>
-                        
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
-                        
-                            <button type="submit">Login</button>
-                        </div>
-                    
-                        <div class="" style="background-color:#f1f1f1">
-                            <a href="/index" class="backbtn">Back</a>
-                            <span class="psw">Forgot <a href="#">password?</a></span>
-                        </div>
-                    </form>
+                    <form id="login-form">
+                        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+                        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+                        <input type="submit" value="Login" id="login-form-submit">
+                      </form>
                 </div>
                 <div class="col-2"></div>
             </div>
