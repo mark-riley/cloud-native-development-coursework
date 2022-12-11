@@ -21,7 +21,15 @@ $(document).ready(function() {
     //Execute the submit new asset function
     submitNewAsset();
     
-  }); 
+  });
+
+  $("#standardLogin").click(function(){
+
+    //Execute the standard login function
+    standardLogin();
+
+  });
+
 });
 
 //A function to submit a new asset to the REST endpoint 
@@ -80,3 +88,7 @@ function getVideos(){
  
 }
 
+function standardLogin(){
+
+    window.prompt("Username", "Login");
+}
