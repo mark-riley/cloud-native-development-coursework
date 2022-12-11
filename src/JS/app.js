@@ -30,6 +30,13 @@ $(document).ready(function() {
 
   });
 
+  $("#getUserInfo").click(function(){
+
+    //Execute the standard login function
+    getUserInfo();
+
+  });
+
 });
 
 //A function to submit a new asset to the REST endpoint 
@@ -87,6 +94,16 @@ function getVideos(){
     });
  
 }
+
+async function getUserInfo() {
+    const response = await fetch('/.auth/me');
+    const payload = await response.json();
+    const { clientPrincipal } = payload;
+    return clientPrincipal;
+}
+  
+//console.log(await getUserInfo());
+window.alert(await getUserInfo());
 
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
