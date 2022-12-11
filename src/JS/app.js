@@ -88,7 +88,3 @@ function getVideos(){
  
 }
 
-function standardLogin(){
-
-    window.prompt("Username", "Login");
-}
