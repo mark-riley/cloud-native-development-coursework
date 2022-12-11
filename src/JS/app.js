@@ -33,7 +33,7 @@ $(document).ready(function() {
   $("#getUserInfo").click(function(){
 
     //Execute the standard login function
-    getUserInfo();
+    getUser();
 
   });
 
@@ -95,7 +95,7 @@ function getVideos(){
  
 }
 
-async function getUserInfo() {
+async function getUser() {
     const response = await fetch('/.auth/me');
     const payload = await response.json();
     const { clientPrincipal } = payload;
@@ -103,21 +103,21 @@ async function getUserInfo() {
 }
   
 //console.log(await getUserInfo());
-window.alert(await getUserInfo());
+//window.alert(await getUserInfo());
 
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+// const loginForm = document.getElementById("login-form");
+// const loginButton = document.getElementById("login-form-submit");
+// const loginErrorMsg = document.getElementById("login-error-msg");
 
-loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
+// loginButton.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     const username = loginForm.username.value;
+//     const password = loginForm.password.value;
 
-    if (username === "user" && password === "web_dev") {
-        alert("You have successfully logged in.");
-        location.reload();
-    } else {
-        loginErrorMsg.style.opacity = 1;
-    }
-})
+//     if (username === "user" && password === "web_dev") {
+//         alert("You have successfully logged in.");
+//         location.reload();
+//     } else {
+//         loginErrorMsg.style.opacity = 1;
+//     }
+// })
