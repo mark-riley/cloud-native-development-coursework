@@ -12,17 +12,6 @@
 
     	<script type="text/javascript" src="JS/app.js"></script>
 
-		<script>
-			async function getUser() {
-    const response = await fetch('/.auth/me');
-    const payload = await response.json();
-    const { clientPrincipal } = payload;
-    return clientPrincipal;
-}
-  
-console.log(await getUserInfo());
-		</script>
-
     </head>
   
     <body>
