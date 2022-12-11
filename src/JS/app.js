@@ -95,14 +95,14 @@ function getVideos(){
  
 }
 
-async function getUser() {
-    const response = await fetch('/.auth/me');
-    const payload = await response.json();
-    const { clientPrincipal } = payload;
-    return clientPrincipal;
-}
+// async function getUser() {
+//     const response = await fetch('/.auth/me');
+//     const payload = await response.json();
+//     const { clientPrincipal } = payload;
+//     return clientPrincipal;
+// }
   
-//console.log(await getUserInfo());
+// console.log(await getUserInfo());
 //window.alert(await getUserInfo());
 
 // const loginForm = document.getElementById("login-form");
