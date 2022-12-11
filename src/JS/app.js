@@ -23,20 +23,6 @@ $(document).ready(function() {
     
   });
 
-  $("#standardLogin").click(function(){
-
-    //Execute the standard login function
-    standardLogin();
-
-  });
-
-  $("#getUserInfo").click(function(){
-
-    //Execute the standard login function
-    getUser();
-
-  });
-
 });
 
 //A function to submit a new asset to the REST endpoint 
@@ -94,32 +80,3 @@ function getVideos(){
     });
  
 }
-
-//async function getUser() {
-function getUser() {
-    // const response = await fetch('/.auth/me');
-    window.alert(fetch('/.auth/me'));
-    // const payload = await response.json();
-    // const { clientPrincipal } = payload;
-    // return clientPrincipal;
-}
-  
-//console.log(await getUserInfo());
-//window.alert(await getUserInfo());
-
-// const loginForm = document.getElementById("login-form");
-// const loginButton = document.getElementById("login-form-submit");
-// const loginErrorMsg = document.getElementById("login-error-msg");
-
-// loginButton.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     const username = loginForm.username.value;
-//     const password = loginForm.password.value;
-
-//     if (username === "user" && password === "web_dev") {
-//         alert("You have successfully logged in.");
-//         location.reload();
-//     } else {
-//         loginErrorMsg.style.opacity = 1;
-//     }
-// })
